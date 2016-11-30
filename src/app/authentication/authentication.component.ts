@@ -28,7 +28,7 @@ export class AuthenticationComponent implements OnInit {
       console.log('login success: ', res );
       this.status = { 'success': 'login success' }
     }, error=>{
-      alert( "login error "+ error );
+      console.log( "login error "+ error );
     },()=>{
       this.status.loader = false; 
     })
