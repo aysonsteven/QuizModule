@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <div *ngIf=" sessionSrvc.sessionData">
+    user logged in {{ sessionSrvc.sessionData.id }}
+    <quiz-quizbuilder></quiz-quizbuilder>
+  </div>
+  <div *ngIf="! sessionSrvc.sessionData">
+    <quiz-quiztest></quiz-quiztest>
+  </div>
+</div>

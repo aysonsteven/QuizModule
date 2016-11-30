@@ -1,0 +1,21 @@
+
+<div class="container-fluid">
+  <div class="form-group">
+    <label for="">User ID</label>
+    <input type="text" class="form-control" [(ngModel)]="loginForm.id">
+  </div>
+  <div class="form-group">
+    <label for="">User Password</label>
+    <input type="text" class="form-control" [(ngModel)]="loginForm.password">
+  </div>
+  <div class="form-group">
+    <div notice *ngIf=" status.loader ">Please, wait.</div>
+    <div warning *ngIf=" status.error ">{{ status.error }}</div>
+    <div warning *ngIf=" status.success ">{{ status.success }}</div>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" (click)="onClickLogin()">Login</button>
+    <button class="btn btn-secondary">Reset</button>
+  </div>
+
+</div>
